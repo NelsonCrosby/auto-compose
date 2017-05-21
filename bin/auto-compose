@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+// vim: ft=javascript
+
+const debug = require('debug')('auto-compose:main')
+const express = require('express')
+const app = express()
+
+const morgan = require('morgan')
+const bodyParser = require('body-parser')
+
+app.use(morgan('combined'))
+app.use(bodyParser.json({ type: '*/json' }))
+
+app.use('/api/v1', require('../api'))
+//app.use('/', require('../ui'))
+
+const hostname = process.env.AUTO_COMPOSE_HOSTNAME || '0.0.0.0'
+const port = process.env.AUTO_COMPOSE_PORT || 8886
+app.listen(port, hostname, () => {
+  debug(`listening on http://${hostname}:${port}`)
+})
