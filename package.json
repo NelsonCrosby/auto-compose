@@ -1,0 +1,22 @@
+{
+  "name": "auto-compose",
+  "version": "0.0.0",
+  "description": "Simple deployment manager for Docker Compose",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NelsonCrosby/auto-compose.git"
+  },
+  "author": "Nelson Crosby <nelsonc@sourcecomb.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NelsonCrosby/auto-compose/issues"
+  },
+  "homepage": "https://github.com/NelsonCrosby/auto-compose#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
